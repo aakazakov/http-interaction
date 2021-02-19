@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(name ="/", produces = MediaType.TEXT_PLAIN_VALUE)
+@RequestMapping(name ="/", produces = MediaType.TEXT_HTML_VALUE)
 public class RequestController {
 
 	@GetMapping
 	public String getResponse() {
-		return "Hello, friend!";
+		return "<h1>Hello, friend!<h1>";
 	}
 	
 }
