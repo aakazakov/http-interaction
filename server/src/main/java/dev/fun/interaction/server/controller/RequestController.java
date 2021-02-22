@@ -12,7 +12,8 @@ public class RequestController {
 
 	@GetMapping("/{var}")
 	public String getResponse(@PathVariable(name = "var") String var) {
-		return "echo: " + var;
+		System.out.println("I've got it");
+		return "echo: " + var + "\n";
 	}
 	
 }
