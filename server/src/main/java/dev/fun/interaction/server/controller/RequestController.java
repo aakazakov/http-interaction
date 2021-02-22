@@ -2,16 +2,17 @@ package dev.fun.interaction.server.controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(name ="/", produces = MediaType.TEXT_HTML_VALUE)
+@RequestMapping(name ="/", produces = MediaType.TEXT_PLAIN_VALUE)
 public class RequestController {
 
-	@GetMapping
-	public String getResponse() {
-		return "<h1>Hello, friend!<h1>";
+	@GetMapping("/{var}")
+	public String getResponse(@PathVariable(name = "var") String var) {
+		return "echo: " + var;
 	}
 	
 }
