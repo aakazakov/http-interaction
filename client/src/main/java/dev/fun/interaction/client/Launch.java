@@ -47,7 +47,7 @@ public class Launch {
 			
 			StringBuilder req = new StringBuilder();
 			
-			String payload = "{\n\t\t\t\t\"value\": \"world\"\n}";
+			String payload = "{\n\s\s\s\s\"value\": \"world\"\n}";
 			
 			req.append("POST /req/post HTTP/1.1").append("\r\n");
 			req.append("Host: ").append("localhost:8089").append("\r\n");
